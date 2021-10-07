@@ -3,4 +3,5 @@
 ```pip install pyjokes```<br><br>
 ```pip install wikipedia```<br><br>
 ```pip install pipwin```<br><br>
-```pipwin install PyAudio```
+```pipwin install PyAudio```<br><br>
+```pip install psutil```
