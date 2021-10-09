@@ -9,6 +9,7 @@ import psutil
 import webbrowser
 import requests
 import os
+from playsound import playsound
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
@@ -76,6 +77,7 @@ def run():
 
     elif 'good night' in command:
         talk("Good bye sir, see you tomorrow")
+        sys.exit()
 
     elif 'turn off' in command or 'shut up' in command or 'stop' in command:
         talk("Okay sir")
@@ -104,13 +106,13 @@ def run():
         webbrowser.open("http://scratch.mit.edu")
         talk("Job Done Sir")
 
-    elif 'open notepad' in command:
+    elif 'notepad' in command:
         talk("Sure Sir")
         talk("Opening Notepad")
         os.startfile("C:/Windows/System32/notepad.exe")
         talk("Job Done Sir")
 
-    elif 'open command prompt' in command or 'open cmd' in command:
+    elif 'command prompt' in command or 'cmd' in command:
         talk("Sure Sir")
         talk("Opening Command Prompt")
         os.system("start cmd")
@@ -131,8 +133,73 @@ def run():
         except Exception as e:
             talk("Sorry Sir, Because of some network issues or some other issues I can't find where we are.")
 
+    elif "set alarm" in command:
+        talk("Enter the time to set alaram")
+        AlaramInp = input("Enter the time to set alaram: ")
+
+        while True:
+            now = datetime.datetime.now().strftime("%H:%M:%S")
+
+            if now == AlaramInp:
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                talk("Hey Sir, It's your jarvis with your alaram")
+                print("Hey Sir, It's your jarvis with your alaram")
+
     else:
-        talk("I don't understand that command")
         run()
 
 while True:
