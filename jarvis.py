@@ -9,7 +9,6 @@ import psutil
 import webbrowser
 import requests
 import os
-from playsound import playsound
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
@@ -104,6 +103,12 @@ def run():
         talk("Sure Sir")
         talk("Opening Scratch")
         webbrowser.open("http://scratch.mit.edu")
+        talk("Job Done Sir")
+
+    elif 'open mail' in command:
+        talk("Sure Sir")
+        talk("Opening Gmail")
+        webbrowser.open("https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox")
         talk("Job Done Sir")
 
     elif 'notepad' in command:
